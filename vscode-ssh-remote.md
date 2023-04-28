@@ -1,3 +1,7 @@
+### 下载vscode 插件
+  
+ssh-remote插件
+
 ### 配置ssh
 
 生成公钥和私钥
