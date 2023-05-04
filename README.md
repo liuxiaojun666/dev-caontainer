@@ -10,7 +10,11 @@
 # 打包一个ubuntu镜像，可传入用户名和密码
 docker build -t dev-env:10 . --build-arg USER=dev --build-arg PASSWORD=dev --network=host
 # 运行镜像
-docker run -itd --name code-dev -p 2222:22 -v /home/dev/code:/home/dev/code dev-env:10 /etc/init.d/ssh start -D
+docker run -itd --name code-dev \
+  -p 2222:22 \
+  -v /home/dev/code:/home/dev/code \
+  dev-env:10 /etc/init.d/ssh start -D --network=host
+
 # 连接进入容器
 ssh -p 2222 dev@localhost
 ```

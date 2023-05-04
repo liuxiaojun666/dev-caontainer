@@ -45,3 +45,7 @@ vim ～/.ssh/authorized_keys
 ```bash
 chown -R 1000:1000 /home/xxx
 ```
+
+## 服务器端口映射问题
+
+在vscode终端面板旁边的端口功能中添加端口，即可在本地访问服务器的端口
