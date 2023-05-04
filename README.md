@@ -4,7 +4,7 @@
 
 ## docker打包一个ubuntu镜像
 
-具体的Dockerfile可以参考[这里]('./Dockerfile')
+具体的Dockerfile可以参考 *./Dockerfile*
 
 ```bash
 # 打包一个ubuntu镜像，可传入用户名和密码
@@ -23,8 +23,8 @@ ssh -p 2222 dev@localhost
 
 ## 过程中可能会下载失败，使用clssh代理
 
-具体的clssh使用方法可以参考[这里](./clssh.md)
+具体的clssh使用方法可以参考 *./clssh.md*
 
 ## 连接远程服务器
 
-具体参考[这里](./vscode-ssh-remote.md)
+具体参考 *./vscode-ssh-remote.md*
