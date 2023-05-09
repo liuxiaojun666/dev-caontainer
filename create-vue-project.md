@@ -211,3 +211,42 @@ export default defineConfig({
   ],
 })
 ```
+
+## 常用包自动导入 
+
+pnpm i -D unplugin-auto-import
+
+vite.config.ts 中添加
+
+``` ts
+export default defineConfig({
+  plugins: [
+    AutoImport({
+      imports: [
+        'vue',
+        'vue-router',
+        'vuex',
+      ],
+      vueTemplate: true,
+      dts: './auto-imports.d.ts',
+    }),
+  ],
+})
+```
+
+tsconfig.json 中添加
+
+``` json
+{
+  "include": [
+    "...",
+    "auto-imports.d.ts"
+  ]
+}
+```
+
+如果不生效，禁用vscode 自带的ts插件，仅使用volar插件检查ts类型
+
+ctrl + shift + p -> 搜索 show builtin extensions -> 禁用 TypeScript and JavaScript Language Features
+
+重启vscode
